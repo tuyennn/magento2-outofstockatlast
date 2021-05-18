@@ -8,8 +8,8 @@
 ![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-green.svg)
 
 ---
-- [Extension on GitHub](https://github.com/tuyennn/magento2-customer-avatar)
-- [Direct download link](https://github.com/tuyennn/magento2-customer-avatar/tarball/master)
+- [Extension on GitHub](https://github.com/tuyennn/magento2-outofstockatlast)
+- [Direct download link](https://github.com/tuyennn/magento2-outofstockatlast/tarball/master)
 
 ## Main Functionalities
 - Sort Out Of Stock Product At last the product list
