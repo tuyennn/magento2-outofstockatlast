@@ -76,7 +76,7 @@ class Inventory extends AbstractDb
                 ->getIsInStock();
         }
 
-        return $stockStatus;
+        return (int)$stockStatus;
     }
 
     /**
