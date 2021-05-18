@@ -1,0 +1,15 @@
+dist: trusty
+
+language: php
+
+php:
+  - 7.2
+  - 7.3
+  - 7.4
+
+before_install:
+  - composer create-project magento/magento-coding-standard --stability=dev magento-coding-standard
+  - cd magento-coding-standard
+
+script:
+  - vendor/bin/phpcs --ignore=../magento-coding-standard/* --standard=Magento2 --extensions=php,js,css ../.
