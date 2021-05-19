@@ -13,6 +13,7 @@
 
 ## Main Functionalities
 - Sort Out Of Stock Product At last the product list
+- Compatibility with `smile/elasticsuite~2.10.0`
 - Firstly `Display Out of Stock Products` Stores > Configuration > Catalog > Inventory > Stock must be set `Yes`
 - Of course, we are talking about Elastic Search. We don't support *old search engine*
 
