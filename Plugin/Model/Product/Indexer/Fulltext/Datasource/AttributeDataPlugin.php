@@ -1,11 +1,11 @@
 <?php
+declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\Product\Indexer\Fulltext\Datasource;
 
 use GhoSter\OutOfStockAtLast\Model\Elasticsearch\Adapter\DataMapper\Stock as StockDataMapper;
 use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Smile\ElasticsuiteCatalog\Model\Product\Indexer\Fulltext\Datasource\AttributeData;
 
 class AttributeDataPlugin
 {
@@ -31,7 +31,7 @@ class AttributeDataPlugin
     }
 
     /**
-     * @param AttributeData $subject
+     * @param $subject
      * @param array $result
      * @param $storeId
      * @param array $indexData
@@ -39,7 +39,7 @@ class AttributeDataPlugin
      * @throws NoSuchEntityException
      */
     public function afterAddData(
-        AttributeData $subject,
+        $subject,
         array $result,
         $storeId,
         array $indexData
