@@ -1,14 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace GhoSter\OutOfStockAtLast\Plugin\Model\Adapter\BatchDataMapper;
+namespace GhoSter\OutOfStockAtLast\Plugin\Model\Product\Indexer\Fulltext\Datasource;
 
-use Magento\Elasticsearch\Model\Adapter\BatchDataMapper\ProductDataMapper;
 use GhoSter\OutOfStockAtLast\Model\Elasticsearch\Adapter\DataMapper\Stock as StockDataMapper;
 use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
 use Magento\Framework\Exception\NoSuchEntityException;
 
-class ProductDataMapperPlugin
+class AttributeDataPlugin
 {
     /**
      * @var StockDataMapper
@@ -21,7 +20,7 @@ class ProductDataMapperPlugin
     protected $inventory;
 
     /**
-     * ProductDataMapperPlugin constructor.
+     * AttributeDataPlugin constructor.
      * @param StockDataMapper $stockDataMapper
      * @param Inventory $inventory
      */
@@ -32,31 +31,27 @@ class ProductDataMapperPlugin
     }
 
     /**
-     * @param ProductDataMapper $subject
-     * @param $documents
-     * @param $documentData
+     * @param $subject
+     * @param array $result
      * @param $storeId
-     * @param $context
-     * @return mixed
+     * @param array $indexData
+     * @return array
      * @throws NoSuchEntityException
      */
-    public function afterMap(
-        ProductDataMapper $subject,
-        $documents,
-        $documentData,
+    public function afterAddData(
+        $subject,
+        array $result,
         $storeId,
-        $context
-    ) {
-        $this->inventory->saveRelation(array_keys($documents));
-
-        foreach ($documents as $productId => $document) {
+        array $indexData
+    ): array {
+        $this->inventory->saveRelation(array_keys($indexData));
+        foreach ($result as $productId => $item) {
             //@codingStandardsIgnoreLine
-            $document = array_merge($document, $this->stockDataMapper->map($productId, $storeId));
-            $documents[$productId] = $document;
+            $item = array_merge($item, $this->stockDataMapper->map($productId, $storeId));
+            $result[$productId] = $item;
         }
-
         $this->inventory->clearRelation();
 
-        return $documents;
+        return $result;
     }
 }

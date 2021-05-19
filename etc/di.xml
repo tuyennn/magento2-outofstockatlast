@@ -4,4 +4,8 @@
         <plugin sortOrder="10" name="GhoSter_OutOfStockAtLast::add_data_to_mappers_result"
                 type="GhoSter\OutOfStockAtLast\Plugin\Model\Adapter\BatchDataMapper\ProductDataMapperPlugin"/>
     </type>
+    <type name="Smile\ElasticsuiteCatalog\Model\Product\Indexer\Fulltext\Datasource\AttributeData">
+        <plugin sortOrder="10" name="GhoSter_OutOfStockAtLast::smile_add_data_to_mappers_result"
+                type="GhoSter\OutOfStockAtLast\Plugin\Model\Product\Indexer\Fulltext\Datasource\AttributeDataPlugin"/>
+    </type>
 </config>

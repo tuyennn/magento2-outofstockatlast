@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\Catalog\Model\ResourceModel\Product\Collection">
-        <plugin name="GhoSter_OutOfStockAtLast::SortingMethodsProcessor" type="GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Product\CollectionPlugin"/>
+        <plugin sortOrder="10" name="GhoSter_OutOfStockAtLast::process_sort_collection"
+                type="GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Product\CollectionPlugin"/>
     </type>
 </config>
