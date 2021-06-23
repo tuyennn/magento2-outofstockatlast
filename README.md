@@ -6,7 +6,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/thinghost)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/63baac1389b34c8d8b1005a087f8f2ab)](https://www.codacy.com/gh/tuyennn/magento2-outofstockatlast/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tuyennn/magento2-outofstockatlast&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/tuyennn/magento2-outofstockatlast.svg?branch=master)](https://travis-ci.org/tuyennn/magento2-outofstockatlast)
-![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-green.svg)
+![Version 1.0.1](https://img.shields.io/badge/Version-1.0.0-green.svg)
 
 ---
 - [Extension on GitHub](https://github.com/tuyennn/magento2-outofstockatlast)
