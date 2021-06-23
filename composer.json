@@ -2,8 +2,6 @@
     "name": "ghoster/module-outofstockatlast",
     "description": "Magento 2.4.x module Sort Out Of Stock Product At last the product list",
     "require": {
-        "php": "~7.2.0|~7.3.0|~7.4.0",
-        "magento/module-catalog": "103.0.*",
         "magento/module-elasticsearch-7": "*"
     },
     "suggest": {
