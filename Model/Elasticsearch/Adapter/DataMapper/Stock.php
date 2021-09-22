@@ -38,7 +38,7 @@ class Stock
      * @return bool[]|int[]
      * @throws NoSuchEntityException
      */
-    public function map($entityId, $storeId)
+    public function map($entityId, $storeId): array
     {
         $sku = $this->inventory->getSkuRelation((int)$entityId);
 
