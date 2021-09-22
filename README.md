@@ -2,12 +2,14 @@
 
     composer require ghoster/module-outofstockatlast
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Latest Stable Version](http://poser.pugx.org/ghoster/module-outofstockatlast/v)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
+[![Total Downloads](http://poser.pugx.org/ghoster/module-outofstockatlast/downloads)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
+[![Latest Unstable Version](http://poser.pugx.org/ghoster/module-outofstockatlast/v/unstable)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
+[![License](http://poser.pugx.org/ghoster/module-outofstockatlast/license)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
+[![PHP Version Require](http://poser.pugx.org/ghoster/module-outofstockatlast/require/php)](https://packagist.org/packages/ghoster/module-outofstockatlast)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/thinghost)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/63baac1389b34c8d8b1005a087f8f2ab)](https://www.codacy.com/gh/tuyennn/magento2-outofstockatlast/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tuyennn/magento2-outofstockatlast&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.com/tuyennn/magento2-outofstockatlast.svg?branch=master)](https://travis-ci.com/tuyennn/magento2-outofstockatlast)
-![Version 1.0.1](https://img.shields.io/badge/Version-1.0.0-green.svg)
-
 ---
 - [Extension on GitHub](https://github.com/tuyennn/magento2-outofstockatlast)
 - [Direct download link](https://github.com/tuyennn/magento2-outofstockatlast/tarball/master)
@@ -45,3 +47,8 @@
 
 - Reindexing after you enable the module
 
+## Donation
+
+If this project help you reduce time to develop, you can give me a cup of beer :)
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/thinghost)

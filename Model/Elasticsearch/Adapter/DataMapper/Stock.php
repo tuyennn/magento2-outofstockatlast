@@ -7,6 +7,10 @@ use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Store\Model\StoreManagerInterface;
 use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
 
+/**
+ * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
+ * Class Stock for mapping
+ */
 class Stock
 {
     /**
@@ -33,12 +37,14 @@ class Stock
     }
 
     /**
-     * @param $entityId
-     * @param $storeId
+     * Map the attribute
+     *
+     * @param mixed $entityId
+     * @param mixed $storeId
      * @return bool[]|int[]
      * @throws NoSuchEntityException
      */
-    public function map($entityId, $storeId)
+    public function map($entityId, $storeId): array
     {
         $sku = $this->inventory->getSkuRelation((int)$entityId);
 
