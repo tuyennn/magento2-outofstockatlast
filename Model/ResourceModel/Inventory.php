@@ -9,6 +9,10 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 use Magento\Framework\Model\ResourceModel\Db\Context;
 use Magento\Framework\Module\Manager;
 
+/**
+ * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
+ * Class Inventory for stock processing and calculation
+ */
 class Inventory extends AbstractDb
 {
     /**
@@ -38,22 +42,26 @@ class Inventory extends AbstractDb
 
     /**
      * Inventory constructor.
+     *
      * @param Manager $moduleManager
      * @param StockRegistryInterface $stockRegistry
      * @param Context $context
-     * @param null $connectionName
+     * @param ?string $connectionName
      */
     public function __construct(
         Manager $moduleManager,
         StockRegistryInterface $stockRegistry,
         Context $context,
-        $connectionName = null
+        string $connectionName = null
     ) {
         parent::__construct($context, $connectionName);
         $this->moduleManager = $moduleManager;
         $this->stockRegistry = $stockRegistry;
     }
 
+    /**
+     * Initialize
+     */
     protected function _construct()
     {
         $this->stockIds = [];
@@ -61,12 +69,14 @@ class Inventory extends AbstractDb
     }
 
     /**
-     * @param $productSku
-     * @param $websiteCode
+     * Get stock status
+     *
+     * @param string $productSku
+     * @param ?string $websiteCode
      * @return int
      * @throws NoSuchEntityException
      */
-    public function getStockStatus($productSku, $websiteCode): int
+    public function getStockStatus(string $productSku, ?string $websiteCode): int
     {
         if ($this->moduleManager->isEnabled('Magento_Inventory')) {
             $stockStatus = $this->getMsiStock($productSku, $websiteCode);
@@ -80,6 +90,8 @@ class Inventory extends AbstractDb
     }
 
     /**
+     * Get Msi stock
+     *
      * @param string $productSku
      * @param string $websiteCode
      * @return int
@@ -98,6 +110,8 @@ class Inventory extends AbstractDb
     }
 
     /**
+     * Get stock id
+     *
      * @param string $websiteCode
      * @return int|mixed
      */
@@ -115,6 +129,8 @@ class Inventory extends AbstractDb
     }
 
     /**
+     * Relation saving
+     *
      * @param array $entityIds
      * @return Inventory
      */
@@ -139,6 +155,8 @@ class Inventory extends AbstractDb
     }
 
     /**
+     * Get sku relation
+     *
      * @param int $entityId
      * @return string
      */

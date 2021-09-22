@@ -8,6 +8,10 @@ use GhoSter\OutOfStockAtLast\Model\Elasticsearch\Adapter\DataMapper\Stock as Sto
 use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
 use Magento\Framework\Exception\NoSuchEntityException;
 
+/**
+ * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
+ * Class ProductDataMapperPlugin for mapping hook
+ */
 class ProductDataMapperPlugin
 {
     /**
@@ -32,11 +36,13 @@ class ProductDataMapperPlugin
     }
 
     /**
+     * Map more attributes
+     *
      * @param ProductDataMapper $subject
-     * @param $documents
-     * @param $documentData
-     * @param $storeId
-     * @param $context
+     * @param mixed $documents
+     * @param mixed $documentData
+     * @param mixed $storeId
+     * @param mixed $context
      * @return mixed
      * @throws NoSuchEntityException
      */

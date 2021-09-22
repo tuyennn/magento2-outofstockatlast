@@ -6,6 +6,10 @@ namespace GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Product;
 use Magento\Catalog\Model\ResourceModel\Product\Collection;
 use Zend_Db_Select;
 
+/**
+ * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
+ * Class CollectionPlugin
+ */
 class CollectionPlugin
 {
     /**
@@ -14,8 +18,10 @@ class CollectionPlugin
     private $skipFlags = [];
 
     /**
+     * Setting order and determine flags
+     *
      * @param Collection $subject
-     * @param $attribute
+     * @param mixed $attribute
      * @param string $dir
      * @return array
      */
@@ -39,6 +45,7 @@ class CollectionPlugin
 
     /**
      * Get flag by attribute
+     *
      * @param string $attribute
      * @return string
      */
@@ -49,14 +56,19 @@ class CollectionPlugin
 
     /**
      * Try to determine applied sorting attribute flags
-     * @param $subject
+     *
+     * @param Collection $subject
      * @param callable $proceed
-     * @param $attribute
+     * @param mixed $attribute
      * @param string $dir
-     * @return mixed
+     * @return Collection
      */
-    public function aroundSetOrder($subject, callable $proceed, $attribute, $dir = Zend_Db_Select::SQL_DESC)
-    {
+    public function aroundSetOrder(
+        Collection $subject,
+        callable $proceed,
+        $attribute,
+        string $dir = Zend_Db_Select::SQL_DESC
+    ): Collection {
         $flagName = $this->_getFlag($attribute);
         if (!in_array($flagName, $this->skipFlags)) {
             $proceed($attribute, $dir);
@@ -67,6 +79,7 @@ class CollectionPlugin
 
     /**
      * Apply sort orders
+     *
      * @param Collection $collection
      */
     private function applyOutOfStockAtLastOrders(Collection $collection)
@@ -78,13 +91,15 @@ class CollectionPlugin
     }
 
     /**
-     * @param $subject
-     * @param $attribute
+     * Determine and set order if necessary
+     *
+     * @param Collection $subject
+     * @param mixed $attribute
      * @param string $dir
      * @return array
      */
     public function beforeAddOrder(
-        $subject,
+        Collection $subject,
         $attribute,
         string $dir = Zend_Db_Select::SQL_DESC
     ): array {

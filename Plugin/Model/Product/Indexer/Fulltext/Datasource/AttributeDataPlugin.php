@@ -7,6 +7,10 @@ use GhoSter\OutOfStockAtLast\Model\Elasticsearch\Adapter\DataMapper\Stock as Sto
 use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
 use Magento\Framework\Exception\NoSuchEntityException;
 
+/**
+ * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
+ * Class AttributeDataPlugin for fulltext datasource mapping
+ */
 class AttributeDataPlugin
 {
     /**
@@ -31,9 +35,11 @@ class AttributeDataPlugin
     }
 
     /**
+     * Add data for datasource
+     * phpcs:ignore Magento2.Annotation
      * @param $subject
      * @param array $result
-     * @param $storeId
+     * @param mixed $storeId
      * @param array $indexData
      * @return array
      * @throws NoSuchEntityException
