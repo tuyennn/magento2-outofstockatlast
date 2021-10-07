@@ -9,7 +9,7 @@
 [![PHP Version Require](http://poser.pugx.org/ghoster/module-outofstockatlast/require/php)](https://packagist.org/packages/ghoster/module-outofstockatlast)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/thinghost)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/63baac1389b34c8d8b1005a087f8f2ab)](https://www.codacy.com/gh/tuyennn/magento2-outofstockatlast/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tuyennn/magento2-outofstockatlast&amp;utm_campaign=Badge_Grade)
-[![Build Status](https://travis-ci.com/tuyennn/magento2-outofstockatlast.svg?branch=master)](https://travis-ci.com/tuyennn/magento2-outofstockatlast)
+[![Build Status](https://app.travis-ci.com/tuyennn/magento2-outofstockatlast.svg?branch=master)](https://app.travis-ci.com/tuyennn/magento2-outofstockatlast)
 ---
 - [Extension on GitHub](https://github.com/tuyennn/magento2-outofstockatlast)
 - [Direct download link](https://github.com/tuyennn/magento2-outofstockatlast/tarball/master)
