@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Product;
 
 use Magento\Catalog\Model\ResourceModel\Product\Collection;
-use Zend_Db_Select;
+use Magento\Framework\DB\Select;
 
 /**
  * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
@@ -28,7 +28,7 @@ class CollectionPlugin
     public function beforeSetOrder(
         Collection $subject,
         $attribute,
-        string $dir = Zend_Db_Select::SQL_DESC
+        string $dir = Select::SQL_DESC
     ): array {
         $subject->setFlag('is_processing', true);
         $this->applyOutOfStockAtLastOrders($subject);
@@ -67,7 +67,7 @@ class CollectionPlugin
         Collection $subject,
         callable $proceed,
         $attribute,
-        string $dir = Zend_Db_Select::SQL_DESC
+        string $dir = Select::SQL_DESC
     ): Collection {
         $flagName = $this->_getFlag($attribute);
         if (!in_array($flagName, $this->skipFlags)) {
@@ -86,7 +86,7 @@ class CollectionPlugin
     {
         if (!$collection->getFlag('is_sorted_by_oos')) {
             $collection->setFlag('is_sorted_by_oos', true);
-            $collection->setOrder('out_of_stock_at_last', Zend_Db_Select::SQL_DESC);
+            $collection->setOrder('out_of_stock_at_last', Select::SQL_DESC);
         }
     }
 
@@ -101,7 +101,7 @@ class CollectionPlugin
     public function beforeAddOrder(
         Collection $subject,
         $attribute,
-        string $dir = Zend_Db_Select::SQL_DESC
+        string $dir = Select::SQL_DESC
     ): array {
         if (!$subject->getFlag('is_processing')) {
             $result = $this->beforeSetOrder($subject, $attribute, $dir);
