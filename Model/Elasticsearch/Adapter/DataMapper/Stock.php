@@ -41,7 +41,7 @@ class Stock
      *
      * @param mixed $entityId
      * @param mixed $storeId
-     * @return bool[]|int[]
+     * @return int[]
      * @throws NoSuchEntityException
      */
     public function map($entityId, $storeId): array
@@ -49,7 +49,7 @@ class Stock
         $sku = $this->inventory->getSkuRelation((int)$entityId);
 
         if (!$sku) {
-            return ['out_of_stock_at_last' => true];
+            return ['out_of_stock_at_last' => 1];
         }
 
         $value = $this->inventory->getStockStatus(
