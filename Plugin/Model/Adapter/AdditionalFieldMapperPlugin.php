@@ -18,7 +18,7 @@ class AdditionalFieldMapperPlugin
     /**
      * Missing mapped attribute code
      *
-     * @param $subject
+     * @param mixed $subject
      * @param array $result
      * @return array
      */
@@ -34,7 +34,7 @@ class AdditionalFieldMapperPlugin
     /**
      * 3rd module Compatibility
      *
-     * @param $subject
+     * @param mixed $subject
      * @param array $result
      * @return array
      */
