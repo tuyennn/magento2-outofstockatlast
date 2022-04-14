@@ -1,5 +1,14 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Elasticsearch\Model\Adapter\FieldMapper\ProductFieldMapper">
+        <plugin sortOrder="10" name="GhoSter_OutOfStockAtLast::add_more_field"
+                type="GhoSter\OutOfStockAtLast\Plugin\Model\Adapter\AdditionalFieldMapperPlugin"/>
+    </type>
+    <type name="Magento\Elasticsearch\Elasticsearch5\Model\Adapter\FieldMapper\ProductFieldMapperProxy">
+        <plugin sortOrder="10" name="GhoSter_OutOfStockAtLast::add_more_field_deprecated"
+                type="GhoSter\OutOfStockAtLast\Plugin\Model\Adapter\AdditionalFieldMapperPlugin"/>
+    </type>
+
     <type name="Magento\Elasticsearch\Model\Adapter\BatchDataMapper\ProductDataMapper">
         <plugin sortOrder="10" name="GhoSter_OutOfStockAtLast::add_data_to_mappers_result"
                 type="GhoSter\OutOfStockAtLast\Plugin\Model\Adapter\BatchDataMapper\ProductDataMapperPlugin"/>
