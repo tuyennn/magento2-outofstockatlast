@@ -1,9 +1,8 @@
-<?php
+<?php /** @noinspection PhpUnused */
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\Adapter;
 
 /**
- * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
  * Class AdditionalFieldMapperPlugin for es attributes mapping
  */
 class AdditionalFieldMapperPlugin
@@ -21,6 +20,7 @@ class AdditionalFieldMapperPlugin
      * @param mixed $subject
      * @param array $result
      * @return array
+     * @noinspection PhpUnusedParameterInspection
      */
     public function afterGetAllAttributesTypes($subject, array $result): array
     {
@@ -37,6 +37,7 @@ class AdditionalFieldMapperPlugin
      * @param mixed $subject
      * @param array $result
      * @return array
+     * @noinspection PhpUnused
      */
     public function afterBuildEntityFields($subject, array $result): array
     {

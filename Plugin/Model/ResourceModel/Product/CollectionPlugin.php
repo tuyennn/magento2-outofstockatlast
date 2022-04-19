@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpUnused */
 declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Product;
@@ -7,7 +8,6 @@ use Magento\Catalog\Model\ResourceModel\Product\Collection;
 use Magento\Framework\DB\Select;
 
 /**
- * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
  * Class CollectionPlugin
  */
 class CollectionPlugin
@@ -24,6 +24,7 @@ class CollectionPlugin
      * @param mixed $attribute
      * @param string $dir
      * @return array
+     * @noinspection PhpClassConstantAccessedViaChildClassInspection
      */
     public function beforeSetOrder(
         Collection $subject,
@@ -62,6 +63,8 @@ class CollectionPlugin
      * @param mixed $attribute
      * @param string $dir
      * @return Collection
+     * @noinspection PhpUnused
+     * @noinspection PhpClassConstantAccessedViaChildClassInspection
      */
     public function aroundSetOrder(
         Collection $subject,
@@ -81,6 +84,8 @@ class CollectionPlugin
      * Apply sort orders
      *
      * @param Collection $collection
+     * @noinspection PhpClassConstantAccessedViaChildClassInspection
+     * @noinspection PhpRedundantOptionalArgumentInspection
      */
     private function applyOutOfStockAtLastOrders(Collection $collection)
     {
@@ -97,6 +102,8 @@ class CollectionPlugin
      * @param mixed $attribute
      * @param string $dir
      * @return array
+     * @noinspection PhpUnused
+     * @noinspection PhpClassConstantAccessedViaChildClassInspection
      */
     public function beforeAddOrder(
         Collection $subject,

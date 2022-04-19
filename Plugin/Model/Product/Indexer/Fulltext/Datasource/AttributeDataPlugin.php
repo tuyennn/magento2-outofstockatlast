@@ -1,4 +1,5 @@
 <?php
+/** @noinspection PhpUnused */
 declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\Product\Indexer\Fulltext\Datasource;
@@ -8,7 +9,6 @@ use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
 use Magento\Framework\Exception\NoSuchEntityException;
 
 /**
- * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
  * Class AttributeDataPlugin for fulltext datasource mapping
  */
 class AttributeDataPlugin
@@ -27,6 +27,7 @@ class AttributeDataPlugin
      * AttributeDataPlugin constructor.
      * @param StockDataMapper $stockDataMapper
      * @param Inventory $inventory
+     * @noinspection PhpUnused
      */
     public function __construct(StockDataMapper $stockDataMapper, Inventory $inventory)
     {
@@ -43,6 +44,8 @@ class AttributeDataPlugin
      * @param array $indexData
      * @return array
      * @throws NoSuchEntityException
+     * @noinspection PhpUnused
+     * @noinspection PhpUnusedParameterInspection
      */
     public function afterAddData(
         $subject,

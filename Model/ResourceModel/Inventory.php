@@ -10,7 +10,6 @@ use Magento\Framework\Model\ResourceModel\Db\Context;
 use Magento\Framework\Module\Manager;
 
 /**
- * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
  * Class Inventory for stock processing and calculation
  */
 class Inventory extends AbstractDb
@@ -47,6 +46,8 @@ class Inventory extends AbstractDb
      * @param StockRegistryInterface $stockRegistry
      * @param Context $context
      * @param ?string $connectionName
+     * @noinspection PhpDeprecationInspection
+     * @noinspection PhpUnused
      */
     public function __construct(
         Manager $moduleManager,
@@ -61,6 +62,7 @@ class Inventory extends AbstractDb
 
     /**
      * Initialize
+     * @noinspection PhpUnused
      */
     protected function _construct()
     {

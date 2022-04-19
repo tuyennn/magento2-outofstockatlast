@@ -8,7 +8,6 @@ use Magento\Store\Model\StoreManagerInterface;
 use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
 
 /**
- * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
  * Class Stock for mapping
  */
 class Stock
@@ -27,6 +26,7 @@ class Stock
      * Stock constructor.
      * @param Inventory $inventory
      * @param StoreManagerInterface $storeManager
+     * @noinspection PhpUnused
      */
     public function __construct(
         Inventory $inventory,
