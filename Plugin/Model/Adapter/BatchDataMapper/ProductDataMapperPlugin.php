@@ -1,15 +1,15 @@
 <?php
+/** @noinspection PhpUnused */
 declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\Adapter\BatchDataMapper;
 
-use Magento\Elasticsearch\Model\Adapter\BatchDataMapper\ProductDataMapper;
 use GhoSter\OutOfStockAtLast\Model\Elasticsearch\Adapter\DataMapper\Stock as StockDataMapper;
 use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
+use Magento\Elasticsearch\Model\Adapter\BatchDataMapper\ProductDataMapper;
 use Magento\Framework\Exception\NoSuchEntityException;
 
 /**
- * phpcs:ignore Magento2.Legacy.Copyright.FoundCopyrightMissingOrWrongFormat
  * Class ProductDataMapperPlugin for mapping hook
  */
 class ProductDataMapperPlugin
@@ -28,6 +28,7 @@ class ProductDataMapperPlugin
      * ProductDataMapperPlugin constructor.
      * @param StockDataMapper $stockDataMapper
      * @param Inventory $inventory
+     * @noinspection PhpUnused
      */
     public function __construct(StockDataMapper $stockDataMapper, Inventory $inventory)
     {
@@ -45,6 +46,8 @@ class ProductDataMapperPlugin
      * @param mixed $context
      * @return mixed
      * @throws NoSuchEntityException
+     * @noinspection PhpUnusedParameterInspection
+     * @noinspection PhpUnused
      */
     public function afterMap(
         ProductDataMapper $subject,
