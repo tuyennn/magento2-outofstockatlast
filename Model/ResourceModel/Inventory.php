@@ -62,6 +62,7 @@ class Inventory extends AbstractDb
 
     /**
      * Initialize
+     *
      * @noinspection PhpUnused
      */
     protected function _construct()

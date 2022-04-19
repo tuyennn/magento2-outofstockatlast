@@ -8,7 +8,7 @@ use Magento\Catalog\Model\ResourceModel\Product\Collection;
 use Magento\Framework\DB\Select;
 
 /**
- * Class CollectionPlugin
+ * Class CollectionPlugin applying sort order
  */
 class CollectionPlugin
 {

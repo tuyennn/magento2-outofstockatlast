@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Fulltext\Collection;
 
 use GhoSter\OutOfStockAtLast\Model\Elasticsearch\Flag;
+use Magento\Elasticsearch\Model\ResourceModel\Fulltext\Collection\SearchResultApplier;
 
 /**
  * Class SearchResultApplierPlugin marking apply flag
@@ -28,13 +29,13 @@ class SearchResultApplierPlugin
     /**
      * Mark start and stop for flag
      *
-     * @param $subject
+     * @param SearchResultApplier $subject
      * @param callable $proceed
      * @return void
      * @noinspection PhpUnused
      * @noinspection PhpUnusedParameterInspection
      */
-    public function aroundApply($subject, callable $proceed): void
+    public function aroundApply(SearchResultApplier $subject, callable $proceed): void
     {
         $this->flag->apply();
         $proceed();

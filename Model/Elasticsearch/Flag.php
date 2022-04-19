@@ -14,6 +14,8 @@ class Flag
     private $isApplied = false;
 
     /**
+     * Apply flag
+     *
      * @return void
      */
     public function apply()
@@ -22,6 +24,8 @@ class Flag
     }
 
     /**
+     * Stop applying flag
+     *
      * @return void
      */
     public function stop()
@@ -30,6 +34,8 @@ class Flag
     }
 
     /**
+     * Determine flag
+     *
      * @return bool
      */
     public function isApplied(): bool

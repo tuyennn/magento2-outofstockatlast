@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Product\Collection;
 
 use GhoSter\OutOfStockAtLast\Model\Elasticsearch\Flag;
+use Magento\Catalog\Model\ResourceModel\Product\Collection\ProductLimitation;
 
 /**
  * Class ProductLimitationPlugin ignoring Using Price indexing also @see MC-42243
@@ -28,13 +29,13 @@ class ProductLimitationPlugin
     /**
      * Ignore using price indexing @see Issue#10
      *
-     * @param $subject
+     * @param ProductLimitation $subject
      * @param bool $result
      * @return bool
      * @noinspection PhpUnused
      * @noinspection PhpUnusedParameterInspection
      */
-    public function afterIsUsingPriceIndex($subject, bool $result): bool
+    public function afterIsUsingPriceIndex(ProductLimitation $subject, bool $result): bool
     {
         if ($this->flag->isApplied()) {
             $result = false;
