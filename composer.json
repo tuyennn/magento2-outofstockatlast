@@ -6,7 +6,7 @@
         "magento/module-elasticsearch-7": "*"
     },
     "type": "magento2-module",
-    "version": "1.0.6",
+    "version": "1.1.0",
     "authors": [
         {
             "name": "Tuyen Nguyen",
