@@ -1,5 +1,4 @@
 <?php
-/** @noinspection PhpUnused */
 declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\Adapter\BatchDataMapper;
@@ -26,9 +25,9 @@ class ProductDataMapperPlugin
 
     /**
      * ProductDataMapperPlugin constructor.
+     *
      * @param StockDataMapper $stockDataMapper
      * @param Inventory $inventory
-     * @noinspection PhpUnused
      */
     public function __construct(StockDataMapper $stockDataMapper, Inventory $inventory)
     {
@@ -46,8 +45,8 @@ class ProductDataMapperPlugin
      * @param mixed $context
      * @return mixed
      * @throws NoSuchEntityException
-     * @noinspection PhpUnusedParameterInspection
-     * @noinspection PhpUnused
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function afterMap(
         ProductDataMapper $subject,
@@ -59,7 +58,7 @@ class ProductDataMapperPlugin
         $this->inventory->saveRelation(array_keys($documents));
 
         foreach ($documents as $productId => $document) {
-            //@codingStandardsIgnoreLine
+            //phpcs:ignore Magento2.Performance.ForeachArrayMerge.ForeachArrayMerge
             $document = array_merge($document, $this->stockDataMapper->map($productId, $storeId));
             $documents[$productId] = $document;
         }

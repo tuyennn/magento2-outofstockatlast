@@ -1,5 +1,4 @@
 <?php
-/** @noinspection PhpUnused */
 declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Product\Collection;
@@ -32,8 +31,8 @@ class ProductLimitationPlugin
      * @param ProductLimitation $subject
      * @param bool $result
      * @return bool
-     * @noinspection PhpUnused
-     * @noinspection PhpUnusedParameterInspection
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function afterIsUsingPriceIndex(ProductLimitation $subject, bool $result): bool
     {

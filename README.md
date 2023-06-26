@@ -16,11 +16,27 @@
 
 ## Main Functionalities
 - Sort Out Of Stock Product At last the product list
-- Compatibility with `smile/elasticsuite~2.10.0`
-- Firstly `Display Out of Stock Products` Stores > Configuration > Catalog > Inventory > Stock must be set `Yes`
+- Compatibility with `smile/elasticsuite^2.11`
+- Firstly `Display Out of Stock Products` from `Stores > Configuration > Catalog > Inventory > Stock Options` must be set `Yes`
 - Of course, we are talking about Elastic Search. We don't support **old search engine**
 - From time to time we remind you **Reindexing after you enable the module**
-    
+
+
+## Compatibility
+
+Magento Version (Open Source/Commerce)                                     | ElasticSuite Latest Version                                           | Elasticsearch | OpenSearch | Supported
+----------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------|------------------------------|---------------
+**2.0.x**   |ElasticSuite **2.1.x** | 2.x | - | No ❌
+**2.1.x**   |ElasticSuite **2.3.x** | 2.x & 5.x | - | No ❌
+**2.2.x**   |ElasticSuite **2.6.x** | 5.x & 6.x | - | No ❌
+**<2.3.2**  |ElasticSuite **2.8.4** | 5.x & 6.x | - | No ❌
+**<2.3.5**  |ElasticSuite **2.8.x** | 5.x & 6.x | - | No ❌
+**>=2.3.5** |ElasticSuite **2.9.x** | 6.x & 7.x | - | No ❌
+**2.4.0**   |ElasticSuite **2.10.1** | 6.x & 7.x | - | **Yes ✔️** 
+**>=2.4.1 && < 2.4.6** |ElasticSuite **2.10.x** | 6.x & 7.x | - | **Yes ✔️**
+**>=2.4.6** |ElasticSuite **>=2.11.x** | 7.x & 8.x | 1.x & 2.x | **Yes ✔️**
+
+
 
 ## Installation
 \* = in production please use the `--keep-generated` option
