@@ -1,5 +1,4 @@
 <?php
-/** @noinspection PhpUnused */
 declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Fulltext\Collection;
@@ -19,7 +18,6 @@ class SearchResultApplierPlugin
 
     /**
      * @param Flag $flag
-     * @noinspection PhpUnused
      */
     public function __construct(Flag $flag)
     {
@@ -32,8 +30,8 @@ class SearchResultApplierPlugin
      * @param SearchResultApplier $subject
      * @param callable $proceed
      * @return void
-     * @noinspection PhpUnused
-     * @noinspection PhpUnusedParameterInspection
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function aroundApply(SearchResultApplier $subject, callable $proceed): void
     {

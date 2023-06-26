@@ -1,4 +1,5 @@
-<?php /** @noinspection PhpUnused */
+<?php
+declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\Adapter;
 
@@ -20,7 +21,8 @@ class AdditionalFieldMapperPlugin
      * @param mixed $subject
      * @param array $result
      * @return array
-     * @noinspection PhpUnusedParameterInspection
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function afterGetAllAttributesTypes($subject, array $result): array
     {
@@ -37,7 +39,6 @@ class AdditionalFieldMapperPlugin
      * @param mixed $subject
      * @param array $result
      * @return array
-     * @noinspection PhpUnused
      */
     public function afterBuildEntityFields($subject, array $result): array
     {
