@@ -85,8 +85,8 @@ class CollectionPlugin
      */
     private function applyOutOfStockAtLastOrders(Collection $collection)
     {
-        if (!$collection->getFlag('is_sorted_by_oos')) {
-            $collection->setFlag('is_sorted_by_oos', true);
+        if (!$collection->getFlag('sorted_by_oos_flag')) {
+            $collection->setFlag('sorted_by_oos_flag', true);
             $collection->setOrder('out_of_stock_at_last', Select::SQL_DESC);
         }
     }
@@ -109,5 +109,28 @@ class CollectionPlugin
         }
 
         return $result ?? [$attribute, $dir];
+    }
+
+    /**
+     * Prevent double sorting by some attribute.
+     *
+     * @param Collection $collection
+     * @param callable $proceed
+     * @param string $attribute
+     * @param string $dir
+     * @return Collection
+     */
+    public function aroundAddAttributeToSort(
+        Collection $collection,
+        callable $proceed,
+        string $attribute,
+        string $dir = Collection::SORT_ORDER_ASC
+    ): Collection {
+        if (!$collection->getFlag(sprintf('sorted_by_%s_attribute', $attribute))) {
+            $collection->setFlag(sprintf('sorted_by_%s_attribute', $attribute), true);
+            $proceed($attribute, $dir);
+        }
+
+        return $collection;
     }
 }
