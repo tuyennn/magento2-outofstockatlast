@@ -28,4 +28,12 @@
         <plugin sortOrder="10" name="GhoSter_OutOfStockAtLast::mark_apply_flag"
                 type="GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Fulltext\Collection\SearchResultApplierPlugin"/>
     </type>
+
+    <type name="Magento\Catalog\Model\ProductTypes\Config\Reader">
+        <arguments>
+            <argument name="idAttributes" xsi:type="array">
+                <item name="/config/type/stockIndexerModel" xsi:type="string"/>
+            </argument>
+        </arguments>
+    </type>
 </config>
