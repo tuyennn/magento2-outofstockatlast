@@ -18,7 +18,8 @@
             "/package.json",
             "/.eslintrc.json",
             "/.eslintignore",
-            "/tests"
+            "/tests",
+            "/.github"
         ]
     },
     "type": "magento2-module",
