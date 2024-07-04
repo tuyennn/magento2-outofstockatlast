@@ -24,17 +24,18 @@
 
 ## Compatibility
 
-Magento Version (Open Source/Commerce)                                     | ElasticSuite Latest Version                                           | Elasticsearch | OpenSearch | Supported
-----------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------|------------------------------|---------------
-**2.0.x**   |ElasticSuite **2.1.x** | 2.x | - | No ❌
-**2.1.x**   |ElasticSuite **2.3.x** | 2.x & 5.x | - | No ❌
-**2.2.x**   |ElasticSuite **2.6.x** | 5.x & 6.x | - | No ❌
-**<2.3.2**  |ElasticSuite **2.8.4** | 5.x & 6.x | - | No ❌
-**<2.3.5**  |ElasticSuite **2.8.x** | 5.x & 6.x | - | No ❌
-**>=2.3.5** |ElasticSuite **2.9.x** | 6.x & 7.x | - | No ❌
-**2.4.0**   |ElasticSuite **2.10.1** | 6.x & 7.x | - | **Yes ✔️** 
-**>=2.4.1 && < 2.4.6** |ElasticSuite **2.10.x** | 6.x & 7.x | - | **Yes ✔️**
-**>=2.4.6** |ElasticSuite **>=2.11.x** | 7.x & 8.x | 1.x & 2.x | **Yes ✔️**
+| Magento Version (Open Source/Commerce) | Elasticsearch | OpenSearch | ElasticSuite | Supported |
+| -------------------------------------- | ------------- | ---------- | ------------ | --------- |
+| **2.0.x**                              | 2.x           | -          | 2.1.x        | No ❌      |
+| **2.1.x**                              | 2.x & 5.x     | -          | 2.3.x        | No ❌      |
+| **2.2.x**                              | 5.x & 6.x     | -          | 2.6.x        | No ❌      |
+| **<2.3.2**                             | 5.x & 6.x     | -          | 2.8.4        | No ❌      |
+| **<2.3.5**                             | 5.x & 6.x     | -          | 2.8.x        | No ❌      |
+| **>=2.3.5**                            | 6.x & 7.x     | -          | 2.9.x        | No ❌      |
+| **2.4.0**                              | 6.x & 7.x     | -          | 2.10.1       | Yes ✔️     |
+| **>=2.4.1 && < 2.4.6**                 | 6.x & 7.x     | -          | 2.10.x       | Yes ✔️     |
+| **>=2.4.6**                            | 7.x & 8.x     | 1.x & 2.x  | >=2.11.x     | Yes ✔️     |
+
 
 
 
