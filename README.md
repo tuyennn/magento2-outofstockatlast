@@ -2,11 +2,11 @@
 
     composer require ghoster/module-outofstockatlast
 
-[![Latest Stable Version](http://poser.pugx.org/ghoster/module-outofstockatlast/v)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
-[![Total Downloads](http://poser.pugx.org/ghoster/module-outofstockatlast/downloads)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
-[![Latest Unstable Version](http://poser.pugx.org/ghoster/module-outofstockatlast/v/unstable)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
-[![License](http://poser.pugx.org/ghoster/module-outofstockatlast/license)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
-[![PHP Version Require](http://poser.pugx.org/ghoster/module-outofstockatlast/require/php)](https://packagist.org/packages/ghoster/module-outofstockatlast)
+[![Latest Stable Version](https://poser.pugx.org/ghoster/module-outofstockatlast/v)](https://packagist.org/packages/ghoster/module-outofstockatlast)
+[![Total Downloads](https://poser.pugx.org/ghoster/module-outofstockatlast/downloads)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
+[![Latest Unstable Version](https://poser.pugx.org/ghoster/module-outofstockatlast/v/unstable)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
+[![License](https://poser.pugx.org/ghoster/module-outofstockatlast/license)](https://packagist.org/packages/ghoster/module-outofstockatlast) 
+[![PHP Version Require](https://poser.pugx.org/ghoster/module-outofstockatlast/require/php)](https://packagist.org/packages/ghoster/module-outofstockatlast)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/thinghost)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/63baac1389b34c8d8b1005a087f8f2ab)](https://www.codacy.com/gh/tuyennn/magento2-outofstockatlast/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tuyennn/magento2-outofstockatlast&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://github.com/tuyennn/magento2-outofstockatlast/actions/workflows/coding-standard.yml/badge.svg)](https://github.com/tuyennn/magento2-outofstockatlast/actions/workflows/coding-standard.yml)
