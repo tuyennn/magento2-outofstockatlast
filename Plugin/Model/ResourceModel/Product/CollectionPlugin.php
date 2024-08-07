@@ -27,7 +27,7 @@ class CollectionPlugin
     public function beforeSetOrder(
         Collection $subject,
         $attribute,
-        string $dir = Select::SQL_DESC
+        $dir = Select::SQL_DESC
     ): array {
         $subject->setFlag('is_processing', true);
         $this->applyOutOfStockAtLastOrders($subject);
@@ -68,7 +68,7 @@ class CollectionPlugin
         Collection $subject,
         callable $proceed,
         $attribute,
-        string $dir = Select::SQL_DESC
+        $dir = Select::SQL_DESC
     ): Collection {
         $flagName = $this->_getFlag($attribute);
         if (!in_array($flagName, $this->skipFlags)) {
