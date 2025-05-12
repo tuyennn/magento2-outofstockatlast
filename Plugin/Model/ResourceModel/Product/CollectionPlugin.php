@@ -102,7 +102,7 @@ class CollectionPlugin
     public function beforeAddOrder(
         Collection $subject,
         $attribute,
-        string $dir = Select::SQL_DESC
+        $dir = Select::SQL_DESC
     ): array {
         if (!$subject->getFlag('is_processing')) {
             $result = $this->beforeSetOrder($subject, $attribute, $dir);
@@ -124,7 +124,7 @@ class CollectionPlugin
         Collection $collection,
         callable $proceed,
         string $attribute,
-        string $dir = Collection::SORT_ORDER_ASC
+        $dir = Collection::SORT_ORDER_ASC
     ): Collection {
         if (!$collection->getFlag(sprintf('sorted_by_%s_attribute', $attribute))) {
             $collection->setFlag(sprintf('sorted_by_%s_attribute', $attribute), true);

@@ -53,7 +53,7 @@ class Inventory extends AbstractDb
         Manager $moduleManager,
         StockRegistryInterface $stockRegistry,
         Context $context,
-        string $connectionName = null
+        ?string $connectionName = null
     ) {
         parent::__construct($context, $connectionName);
         $this->moduleManager = $moduleManager;
