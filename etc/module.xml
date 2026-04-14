@@ -1,10 +1,15 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="GhoSter_OutOfStockAtLast" setup_version="1.0.0">
+    <module name="GhoSter_OutOfStockAtLast">
         <sequence>
             <module name="Magento_Catalog"/>
             <module name="Magento_Elasticsearch7"/>
+            <module name="Magento_ConfigurableProduct"/>
+            <module name="Magento_CatalogGraphQl"/>
+            <module name="Magento_Store"/>
+            <module name="Magento_Elasticsearch"/>
+            <module name="Magento_CatalogInventory"/>
         </sequence>
     </module>
 </config>

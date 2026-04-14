@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\Adapter;
 
+use Ghoster\OutOfStockAtLast\Model\AdditionalAttribute;
+
 /**
  * Class AdditionalFieldMapperPlugin for es attributes mapping
  */
@@ -12,7 +14,7 @@ class AdditionalFieldMapperPlugin
      * @var string[]
      */
     protected $allowedFields = [
-        'out_of_stock_at_last' => 'integer'
+        AdditionalAttribute::ATTRIBUTE_CODE => 'integer'
     ];
 
     /**

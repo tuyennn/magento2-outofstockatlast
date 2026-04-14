@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Product;
 
+use Ghoster\OutOfStockAtLast\Model\AdditionalAttribute;
 use Magento\Catalog\Model\ResourceModel\Product\Collection;
 use Magento\Framework\DB\Select;
 
@@ -87,7 +88,7 @@ class CollectionPlugin
     {
         if (!$collection->getFlag('sorted_by_oos_flag')) {
             $collection->setFlag('sorted_by_oos_flag', true);
-            $collection->setOrder('out_of_stock_at_last', Select::SQL_DESC);
+            $collection->setOrder(AdditionalAttribute::ATTRIBUTE_CODE, Select::SQL_DESC);
         }
     }
 
