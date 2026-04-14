@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Model\Elasticsearch\Adapter\DataMapper;
 
+use Ghoster\OutOfStockAtLast\Model\AdditionalAttribute;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Store\Model\StoreManagerInterface;
 use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
@@ -49,7 +50,7 @@ class Stock
         $sku = $this->inventory->getSkuRelation((int)$entityId);
 
         if (!$sku) {
-            return ['out_of_stock_at_last' => 1];
+            return [AdditionalAttribute::ATTRIBUTE_CODE => 1];
         }
 
         $value = $this->inventory->getStockStatus(
@@ -57,6 +58,6 @@ class Stock
             $this->storeManager->getStore($storeId)->getWebsite()->getCode()
         );
 
-        return ['out_of_stock_at_last' => $value];
+        return [AdditionalAttribute::ATTRIBUTE_CODE => $value];
     }
 }

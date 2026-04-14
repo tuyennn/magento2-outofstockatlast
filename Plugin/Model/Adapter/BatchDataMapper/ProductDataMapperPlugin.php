@@ -39,22 +39,22 @@ class ProductDataMapperPlugin
      * Map more attributes
      *
      * @param ProductDataMapper $subject
-     * @param mixed $documents
-     * @param mixed $documentData
+     * @param array $documents
+     * @param array $documentData
      * @param mixed $storeId
-     * @param mixed $context
-     * @return mixed
+     * @param array $context
+     * @return array
      * @throws NoSuchEntityException
      *
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function afterMap(
         ProductDataMapper $subject,
-        $documents,
-        $documentData,
+        array $documents,
+        array $documentData,
         $storeId,
-        $context
-    ) {
+        array $context
+    ): array {
         $this->inventory->saveRelation(array_keys($documents));
 
         foreach ($documents as $productId => $document) {

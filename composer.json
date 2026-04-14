@@ -2,8 +2,8 @@
     "name": "ghoster/module-outofstockatlast",
     "description": "Magento 2.4.x module Sort Out Of Stock Product At last the product list",
     "require": {
-        "php": "~7.4.0||~8.0.0||~8.1.0||~8.2.0||~8.3.0||~8.4.0",
-        "magento/framework": "^102.0|^103.0"
+        "php": ">=8.1.0",
+        "magento/framework": ">=102.0.0"
     },
     "minimum-stability": "stable",
     "archive": {
