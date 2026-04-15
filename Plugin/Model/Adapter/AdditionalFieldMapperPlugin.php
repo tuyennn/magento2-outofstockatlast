@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\Adapter;
 
-use Ghoster\OutOfStockAtLast\Model\AdditionalAttribute;
+use GhoSter\OutOfStockAtLast\Model\AdditionalAttribute;
 
 /**
  * Class AdditionalFieldMapperPlugin for es attributes mapping

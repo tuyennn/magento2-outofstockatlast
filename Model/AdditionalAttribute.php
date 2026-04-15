@@ -1,6 +1,6 @@
 <?php
 
-namespace Ghoster\OutOfStockAtLast\Model;
+namespace GhoSter\OutOfStockAtLast\Model;
 
 class AdditionalAttribute
 {
