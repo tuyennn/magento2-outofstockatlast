@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Plugin\Model\ResourceModel\Product;
 
-use Ghoster\OutOfStockAtLast\Model\AdditionalAttribute;
+use GhoSter\OutOfStockAtLast\Model\AdditionalAttribute;
 use Magento\Catalog\Model\ResourceModel\Product\Collection;
 use Magento\Framework\DB\Select;
 

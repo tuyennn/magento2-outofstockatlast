@@ -1,7 +1,7 @@
 <?php
 namespace GhoSter\OutOfStockAtLast\Plugin\DataProvider\Product\SearchCriteriaBuilder;
 
-use Ghoster\OutOfStockAtLast\Model\AdditionalAttribute;
+use GhoSter\OutOfStockAtLast\Model\AdditionalAttribute;
 
 class AddDefaultOrders
 {

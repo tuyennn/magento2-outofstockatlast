@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace GhoSter\OutOfStockAtLast\Model\Elasticsearch\Adapter\DataMapper;
 
-use Ghoster\OutOfStockAtLast\Model\AdditionalAttribute;
+use GhoSter\OutOfStockAtLast\Model\AdditionalAttribute;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Store\Model\StoreManagerInterface;
 use GhoSter\OutOfStockAtLast\Model\ResourceModel\Inventory;
