@@ -18,23 +18,24 @@
 - Sort Out Of Stock Product At last the product list
 - Compatibility with `smile/elasticsuite^2.11`
 - Firstly `Display Out of Stock Products` from `Stores > Configuration > Catalog > Inventory > Stock Options` must be set `Yes`
-- Of course, we are talking about Elastic Search. We don't support **old search engine**
+- Of course, we are talking about ElasticSearch or OpenSearch. We don't support **old search engine**
 - From time to time we remind you **Reindexing after you enable the module**
 
 
 ## Compatibility
 
 | Magento Version (Open Source/Commerce) | Elasticsearch | OpenSearch | ElasticSuite | Supported |
-| -------------------------------------- | ------------- | ---------- | ------------ | --------- |
-| **2.0.x**                              | 2.x           | -          | 2.1.x        | No ❌      |
-| **2.1.x**                              | 2.x & 5.x     | -          | 2.3.x        | No ❌      |
-| **2.2.x**                              | 5.x & 6.x     | -          | 2.6.x        | No ❌      |
-| **<2.3.2**                             | 5.x & 6.x     | -          | 2.8.4        | No ❌      |
-| **<2.3.5**                             | 5.x & 6.x     | -          | 2.8.x        | No ❌      |
-| **>=2.3.5**                            | 6.x & 7.x     | -          | 2.9.x        | No ❌      |
-| **2.4.0**                              | 6.x & 7.x     | -          | 2.10.1       | Yes ✔️     |
-| **>=2.4.1 && < 2.4.6**                 | 6.x & 7.x     | -          | 2.10.x       | Yes ✔️     |
-| **>=2.4.6**                            | 7.x & 8.x     | 1.x & 2.x  | >=2.11.x     | Yes ✔️     |
+|--------------------------------------|---------------|------------|--------------| --------- |
+| **2.0.x**                            | 2.x           | -          | 2.1.x        | No ❌      |
+| **2.1.x**                            | 2.x & 5.x     | -          | 2.3.x        | No ❌      |
+| **2.2.x**                            | 5.x & 6.x     | -          | 2.6.x        | No ❌      |
+| **<2.3.2**                           | 5.x & 6.x     | -          | 2.8.4        | No ❌      |
+| **<2.3.5**                           | 5.x & 6.x     | -          | 2.8.x        | No ❌      |
+| **>=2.3.5**                          | 6.x & 7.x     | -          | 2.9.x        | No ❌      |
+| **2.4.0**                            | 6.x & 7.x     | -          | 2.10.1       | Yes ✔️     |
+| **>=2.4.1 && < 2.4.6**               | 6.x & 7.x     | -          | 2.10.x       | Yes ✔️     |
+| **>=2.4.6 && < 2.4.8                 | 7.x & 8.x     | 1.x & 2.x  | >=2.11.x     | Yes ✔️     |
+| **>=2.4.8**                          | -             | 3.x        | >=2.11.13    | Yes ✔️     |
 
 
 
