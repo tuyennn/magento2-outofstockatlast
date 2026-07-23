@@ -2,34 +2,60 @@
 namespace GhoSter\OutOfStockAtLast\Plugin\DataProvider\Product\SearchCriteriaBuilder;
 
 use GhoSter\OutOfStockAtLast\Model\AdditionalAttribute;
+use Magento\CatalogGraphQl\DataProvider\Product\SearchCriteriaBuilder;
+use Magento\Framework\Api\Search\SearchCriteriaInterface;
+use Magento\Framework\Api\SortOrder;
+use Magento\Framework\Api\SortOrderBuilder;
 
 class AddDefaultOrders
 {
     /**
-     * Add default sorting
+     * @var SortOrderBuilder
+     */
+    private $sortOrderBuilder;
+
+    /**
+     * @param SortOrderBuilder $sortOrderBuilder
+     */
+    public function __construct(
+        SortOrderBuilder $sortOrderBuilder
+    ) {
+        $this->sortOrderBuilder = $sortOrderBuilder;
+    }
+
+    /**
+     * Add default sorting.
      *
-     * phpcs:disable Magento2.Annotation.MethodArguments.NoTypeSpecified
-     *
-     * @param $subject
+     * @param SearchCriteriaBuilder $subject
+     * @param SearchCriteriaInterface $searchCriteria
      * @param array $args
      * @param bool $includeAggregation
-     * @return array
+     *
+     * @return SearchCriteriaInterface
+     * @see \Magento\CatalogGraphQl\DataProvider\Product\SearchCriteriaBuilder::build
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
-    public function beforeBuild(
-        $subject,
+    public function afterBuild(
+        SearchCriteriaBuilder $subject,
+        SearchCriteriaInterface $searchCriteria,
         array $args,
         bool $includeAggregation
-    ): array {
-        if (!isset($args['sort'])) {
-            $args['sort'] = [];
+    ): SearchCriteriaInterface {
+        $sortOrders = $searchCriteria->getSortOrders();
+
+        if (empty($sortOrders)) {
+            return $searchCriteria;
         }
 
-        if (!isset($args['sort'][AdditionalAttribute::ATTRIBUTE_CODE])
-        ) {
-            $args['sort'][AdditionalAttribute::ATTRIBUTE_CODE] = 'DESC';
-        }
+        $sortOrder = $this->sortOrderBuilder
+            ->setField(AdditionalAttribute::ATTRIBUTE_CODE)
+            ->setDirection(SortOrder::SORT_DESC)
+            ->create();
 
-        return [$args, $includeAggregation];
+        array_splice($sortOrders, -1, 0, [$sortOrder]);
+
+        $searchCriteria->setSortOrders($sortOrders);
+
+        return $searchCriteria;
     }
 }
