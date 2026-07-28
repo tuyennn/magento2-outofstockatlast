@@ -52,7 +52,7 @@ class AddDefaultOrders
             ->setDirection(SortOrder::SORT_DESC)
             ->create();
 
-        array_splice($sortOrders, -1, 0, [$sortOrder]);
+        array_unshift($sortOrders, $sortOrder);
 
         $searchCriteria->setSortOrders($sortOrders);
 
