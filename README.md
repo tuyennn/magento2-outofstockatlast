@@ -19,6 +19,7 @@
 - Compatibility with `smile/elasticsuite^2.11`
 - Firstly `Display Out of Stock Products` from `Stores > Configuration > Catalog > Inventory > Stock Options` must be set `Yes`
 - Of course, we are talking about ElasticSearch or OpenSearch. We don't support **old search engine**
+- Support GraphQl
 - From time to time we remind you **Reindexing after you enable the module**
 
 
